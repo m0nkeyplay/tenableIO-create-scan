@@ -1,0 +1,20 @@
+{
+    "newScan": [
+        {
+    "template": "basic",
+    "settings": {
+    "name":     "Basic Network Scan",
+    "shared": 1,
+    "description":  "A full system scan suitable for any host.",
+    "scanner_id":    "",
+    "enabled": false,
+    "launch":   "ON_DEMAND",
+    "timezone": "US/Chicago",
+    "text_targets": "127.0.0.1",
+    "acls": [{
+    "type": "default",
+    "permissions": 16
+    }]
+    } }
+    ]
+}

@@ -1,0 +1,1420 @@
+{
+"READ ME": "Cloud Infratructure Checks and Variables - Take the data from here to build your audit and variable data",
+ "READ_MORE" :"Scraped from an IO scan creation to get the data.  See aws3TL1WFL1Template.json for example use",
+  "credentials": {
+    "data": [
+      {
+        "types": [
+          {
+            "inputs": [
+              {
+                "id": "access_key_id",
+                "name": "AWS Access Key ID",
+                "type": "password",
+                "required": true
+              },
+              {
+                "id": "secret_key",
+                "name": "AWS Secret Key",
+                "type": "password",
+                "required": true
+              }
+            ],
+            "max": 1,
+            "name": "Amazon AWS",
+            "expand_settings": true,
+            "instances": [],
+            "settings": {
+              "compliance": {
+                "inputs": null,
+                "title": "Compliance Auditing",
+                "groups": [
+                  {
+                    "inputs": [
+                      {
+                        "type": "ui_radio",
+                        "name": "Regions to access",
+                        "id": "aws_ui_region_type",
+                        "default": "Rest of the World",
+                        "options": [
+                          {
+                            "inputs": [
+                              {
+                                "type": "checkbox",
+                                "name": "us-gov-east-1",
+                                "id": "aws_us_gov_east_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "us-gov-west-1",
+                                "id": "aws_us_gov_west_1"
+                              }
+                            ],
+                            "name": "GovCloud"
+                          },
+                          {
+                            "inputs": [
+                              {
+                                "type": "checkbox",
+                                "name": "us-east-1",
+                                "id": "aws_us_east_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "us-east-2",
+                                "id": "aws_us_east_2"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "us-west-1",
+                                "id": "aws_us_west_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "us-west-2",
+                                "id": "aws_us_west_2"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ca-central-1",
+                                "id": "aws_ca_central_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "eu-west-1",
+                                "id": "aws_eu_west_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "eu-west-2",
+                                "id": "aws_eu_west_2"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "eu-west-3",
+                                "id": "aws_eu_west_3"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "eu-central-1",
+                                "id": "aws_eu_central_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "eu-north-1",
+                                "id": "aws_eu_north_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-east-1",
+                                "id": "aws_ap_east_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-northeast-1",
+                                "id": "aws_ap_northeast_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-northeast-2",
+                                "id": "aws_ap_northeast_2"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-northeast-3",
+                                "id": "aws_ap_northeast_3"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-southeast-1",
+                                "id": "aws_ap_southeast_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-southeast-2",
+                                "id": "aws_ap_southeast_2"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "ap-south-1",
+                                "id": "aws_ap_south_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "sa-east-1",
+                                "id": "aws_sa_east_1"
+                              }
+                            ],
+                            "name": "Rest of the World"
+                          },
+                          {
+                            "inputs": [
+                              {
+                                "type": "checkbox",
+                                "name": "cn-north-1",
+                                "id": "aws_cn_north_1"
+                              },
+                              {
+                                "type": "checkbox",
+                                "name": "cn-northwest-1",
+                                "id": "aws_cn_northwest_1"
+                              }
+                            ],
+                            "name": "China"
+                          }
+                        ],
+                        "hint": "Credentials for the GovCloud or China Regions cannot be used to access other regions, and vice versa."
+                      },
+                      {
+                        "type": "ui_checkbox",
+                        "name": "HTTPS",
+                        "id": "aws_use_https",
+                        "default": "yes",
+                        "options": [
+                          {
+                            "inputs": null,
+                            "name": "no"
+                          },
+                          {
+                            "inputs": [
+                              {
+                                "type": "checkbox",
+                                "name": "Verify SSL Certificate",
+                                "id": "aws_verify_ssl",
+                                "default": "yes"
+                              }
+                            ],
+                            "name": "yes"
+                          }
+                        ]
+                      }
+                    ],
+                    "title": "Amazon AWS",
+                    "name": "aws",
+                    "sections": []
+                  }
+                ],
+                "sections": []
+              }
+            }
+          },
+          {
+            "inputs": [
+              {
+                "id": "username",
+                "name": "Username",
+                "type": "entry",
+                "required": true
+              },
+              {
+                "id": "password",
+                "name": "Password",
+                "type": "password",
+                "required": true
+              },
+              {
+                "id": "client_id",
+                "name": "Client Id",
+                "type": "entry",
+                "required": true
+              }
+            ],
+            "max": 1,
+            "name": "Microsoft Azure",
+            "expand_settings": true,
+            "instances": [],
+            "settings": {
+              "compliance": {
+                "inputs": null,
+                "title": "Compliance Auditing",
+                "groups": [
+                  {
+                    "inputs": [
+                      {
+                        "type": "entry",
+                        "name": "Subscription IDs",
+                        "id": "microsoft_azure_subscriptions_ids",
+                        "hint": "List subscription IDs to scan, separated by a comma. If this field is blank, all subscriptions will be audited."
+                      }
+                    ],
+                    "title": "Microsoft Azure",
+                    "name": "microsoft_azure",
+                    "sections": []
+                  }
+                ],
+                "sections": []
+              }
+            }
+          },
+          {
+            "inputs": [
+              {
+                "id": "username",
+                "name": "Username",
+                "type": "entry",
+                "required": true
+              },
+              {
+                "id": "password",
+                "name": "Password",
+                "type": "password",
+                "required": true
+              },
+              {
+                "id": "client_id",
+                "name": "Client Id",
+                "type": "entry",
+                "required": true
+              },
+              {
+                "id": "client_secret",
+                "name": "Client Secret",
+                "type": "password",
+                "required": true
+              }
+            ],
+            "max": 1,
+            "name": "Office 365",
+            "instances": [],
+            "settings": null
+          },
+          {
+            "inputs": [
+              {
+                "id": "username",
+                "name": "Username",
+                "type": "entry",
+                "required": true
+              },
+              {
+                "id": "password",
+                "name": "Password or API Key",
+                "type": "password",
+                "required": true
+              },
+              {
+                "id": "auth_method",
+                "name": "Authentication Method",
+                "type": "radio",
+                "default": "API-Key",
+                "options": [
+                  "API-Key",
+                  "Password"
+                ],
+                "required": true
+              }
+            ],
+            "max": 1,
+            "name": "Rackspace",
+            "expand_settings": true,
+            "instances": [],
+            "settings": {
+              "compliance": {
+                "inputs": null,
+                "title": "Compliance Auditing",
+                "groups": [
+                  {
+                    "inputs": [
+                      {
+                        "type": "checkbox",
+                        "name": "Dallas-Fort Worth (DFW)",
+                        "id": "region_dfw_pref_name",
+                        "default": "yes"
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "Chicago (ORD)",
+                        "id": "region_ord_pref_name",
+                        "default": "yes"
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "Northern Virginia (IAD)",
+                        "id": "region_iad_pref_name",
+                        "default": "yes"
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "London (LON)",
+                        "id": "region_lon_pref_name",
+                        "default": "yes"
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "Sydney (SYD)",
+                        "id": "region_syd_pref_name",
+                        "default": "yes"
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "Hong Kong (HKG)",
+                        "id": "region_hkg_pref_name",
+                        "default": "yes"
+                      }
+                    ],
+                    "title": "Rackspace",
+                    "name": "rackspace",
+                    "sections": []
+                  }
+                ],
+                "sections": []
+              }
+            }
+          },
+          {
+            "inputs": [
+              {
+                "id": "username",
+                "name": "Username",
+                "type": "entry",
+                "required": true
+              },
+              {
+                "id": "password",
+                "name": "Password",
+                "type": "password",
+                "required": true
+              }
+            ],
+            "max": 1,
+            "name": "Salesforce.com",
+            "instances": [],
+            "settings": null
+          }
+        ],
+        "name": "Cloud Services",
+        "default_expand": 1
+      }
+    ]
+  },
+  "compliance": {
+    "data": [
+      {
+        "name": "Amazon AWS",
+        "required_creds": [
+          "Amazon AWS"
+        ],
+        "audits": [
+          {
+            "inputs": [
+              {
+                "id": "file",
+                "name": "Audit file",
+                "type": "file",
+                "default": null,
+                "required": true
+              }
+            ],
+            "type": "custom",
+            "name": "(Upload a custom Amazon AWS audit file)",
+            "free": 1,
+            "unlimited": true
+          },
+          {
+            "id": "72426_CIS_Amazon_Web_Services_Foundations_v1.2.0_Level1.audit",
+            "inputs": [
+              {
+                "id": "INACTIVE_ACCOUNT_DAYS",
+                "name": "Days without Account activity",
+                "type": "entry",
+                "default": "90",
+                "hint": "Inactive Days",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "CIS Amazon Web Services Foundations L1 1.2.0",
+            "free": 1
+          },
+          {
+            "id": "72426_CIS_Amazon_Web_Services_Foundations_v1.2.0_Level2.audit",
+            "inputs": [],
+            "type": "feed",
+            "name": "CIS Amazon Web Services Foundations L2 1.2.0",
+            "free": 1
+          },
+          {
+            "id": "72426_CIS_Amazon_Web_Services_Three-tier_Web_Architecture_L1_v1.0.0.audit",
+            "inputs": [
+              {
+                "id": "WEB_TIER_TAG",
+                "name": "The tag name associated with the Web-tier environment.",
+                "type": "entry",
+                "default": "WEB_TIER_TAG",
+                "hint": "Web-tier tag name",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_TAG_VALUE",
+                "name": "The tag value name associated with the Web-tier environment",
+                "type": "entry",
+                "default": "WEB_TIER_TAG_VALUE",
+                "hint": "Web-tier tag value name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_TAG",
+                "name": "The tag name associated with the App-tier environment.",
+                "type": "entry",
+                "default": "APP_TIER_TAG",
+                "hint": "App-tier tag name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_TAG_VALUE",
+                "name": "The tag value name associated with the App-tier environment",
+                "type": "entry",
+                "default": "APP_TIER_TAG_VALUE",
+                "hint": "App-tier tag value name",
+                "required": 1
+              },
+              {
+                "id": "DATA_TIER_TAG",
+                "name": "The tag name associated with the Data-tier environment.",
+                "type": "entry",
+                "default": "DATA_TIER_TAG",
+                "hint": "Data-tier tag name",
+                "required": 1
+              },
+              {
+                "id": "DATA_TIER_TAG_VALUE",
+                "name": "The tag value name associated with the Data-tier environment",
+                "type": "entry",
+                "default": "DATA_TIER_TAG_VALUE",
+                "hint": "Data-tier tag value name",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_ELB",
+                "name": "Designated Load Balancer Name for your Web-tier environment.",
+                "type": "entry",
+                "default": "WEB_TIER_ELB",
+                "hint": "Web-tier Load Balancer Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_ELB",
+                "name": "Designated Load Balancer Name for your App-tier environment.",
+                "type": "entry",
+                "default": "APP_TIER_ELB",
+                "hint": "APP-tier Load Balancer Name",
+                "required": 1
+              },
+              {
+                "id": "S3_BUCKET_NAME",
+                "name": "Your S3 Amazon bucket name.",
+                "type": "entry",
+                "default": "S3_BUCKET_NAME",
+                "hint": "1.16 - S3 Bucket Name",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_ROLE",
+                "name": "The name of the role associated with the Web-tier policy.",
+                "type": "entry",
+                "default": "WEB_TIER_ROLE",
+                "hint": "2.1 - Web-tier Role Name",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_ROLE_POLICY",
+                "name": "The name of the policy document associated with the Web-tier.",
+                "type": "entry",
+                "default": "WEB_TIER_ROLE_POLICY",
+                "hint": "2.1 - Web-teir Role Policy",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_ROLE",
+                "name": "The name of the role associated with the App-tier policy.",
+                "type": "entry",
+                "default": "APP_TIER_ROLE",
+                "hint": "2.2 - App-tier Role Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_ROLE_POLICY",
+                "name": "The name of the policy document associated with the App-tier.",
+                "type": "entry",
+                "default": "APP_TIER_ROLE_POLICY",
+                "hint": "2.2 - App-teir Role Policy",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_LAUNCH_ROLE_NAME",
+                "name": "The Launch Configuration Role name associated with the Web-tier.",
+                "type": "entry",
+                "default": "WEB_TIER_LAUNCH_ROLE_NAME",
+                "hint": "2.5 - Web-teir Launch Configuration Role Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_LAUNCH_ROLE_NAME",
+                "name": "The Launch Configuration Role name associated with the App-tier.",
+                "type": "entry",
+                "default": "APP_TIER_LAUNCH_ROLE_NAME",
+                "hint": "2.6 - App-teir Launch Configuration Role Name",
+                "required": 1
+              },
+              {
+                "id": "ADMIN_GROUP_NAME",
+                "name": "The Admin Group name associated with your environment.",
+                "type": "entry",
+                "default": "ADMIN_GROUP_NAME",
+                "hint": "Admin Group Name",
+                "required": 1
+              },
+              {
+                "id": "ADMIN_POLICY_NAME",
+                "name": "The Admin Policy document name for Admin permissions.",
+                "type": "entry",
+                "default": "ADMIN_POLICY_NAME",
+                "hint": "Admin Policy Name",
+                "required": 1
+              },
+              {
+                "id": "ADMIN_POLICY_ARN",
+                "name": "The Admin Policy ARN associated with your Admin Policy.",
+                "type": "entry",
+                "default": "ADMIN_POLICY_ARN",
+                "hint": "Admin Policy ARN",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_LAUNCH_CONFIG",
+                "name": "The Launch Configuration Name associated with your Web-tier environment.",
+                "type": "entry",
+                "default": "WEB_TIER_LAUNCH_CONFIG",
+                "hint": "3.3 - Web-tier Launch Configuration Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_LAUNCH_CONFIG",
+                "name": "The Launch Configuration Name associated with your App-tier environment.",
+                "type": "entry",
+                "default": "APP_TIER_LAUNCH_CONFIG",
+                "hint": "3.4 - App-tier Launch Configuration Name",
+                "required": 1
+              },
+              {
+                "id": "DB_INSTANCE_ARN",
+                "name": "The Database Instance Arn associated with your Database-tier environment.",
+                "type": "entry",
+                "default": "DB_INSTANCE_ARN",
+                "hint": "Database Instance Arn",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_AUTOSCALING_ELB",
+                "name": "Designated Autoscaling Load Balancer Name for your Web-tier environment.",
+                "type": "entry",
+                "default": "WEB_TIER_AUTOSCALING_ELB",
+                "hint": "Web-tier Autoscaling Load Balancer Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_AUTOSCALING_ELB",
+                "name": "Designated Autoscaling Load Balancer Name for your App-tier environment.",
+                "type": "entry",
+                "default": "APP_TIER_AUTOSCALING_ELB",
+                "hint": "App-tier Autoscaling Load Balancer Name",
+                "required": 1
+              },
+              {
+                "id": "VPC_FLOW_LOG_GROUP_NAME",
+                "name": "The name of the VPC Flow log group.",
+                "type": "entry",
+                "default": "VPC_FLOW_LOG_GROUP_NAME",
+                "hint": "4.6 - VPC Flow Log Group Name",
+                "required": 1
+              },
+              {
+                "id": "VPC_FLOW_LOG_ALARM_NAME",
+                "name": "The name of the VPC Flow alarm.",
+                "type": "entry",
+                "default": "VPC_FLOW_LOG_GROUP_NAME",
+                "hint": "VPC Flow Alarm Name",
+                "required": 1
+              },
+              {
+                "id": "SNS_TOPIC_ARN",
+                "name": "The SNS Topic ARN associated with the VPC Flow Log Alarm.",
+                "type": "entry",
+                "default": "SNS_TOPIC_ARN",
+                "hint": "SNS Topic ARN",
+                "required": 1
+              },
+              {
+                "id": "APP_DISTRIBUTION_ID",
+                "name": "The Cloudfront application distribution ID.",
+                "type": "entry",
+                "default": "APP_DISTRIBUTION_ID",
+                "hint": "5.3 - Application Distribution ID",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_LOG_GROUP",
+                "name": "The Cloudwatch Log Group associated with the Web-tier.",
+                "type": "entry",
+                "default": "WEB_TIER_LOG_GROUP",
+                "hint": "Web-tier Log Group",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_LOG_GROUP",
+                "name": "The Cloudwatch Log Group associated with the App-tier.",
+                "type": "entry",
+                "default": "APP_TIER_LOG_GROUP",
+                "hint": "App-tier Log Group",
+                "required": 1
+              },
+              {
+                "id": "SUBNET1",
+                "name": "The first Subnet for the NAT Gateways from the application VPC.",
+                "type": "entry",
+                "default": "SUBNET1",
+                "hint": "6.10 - Subnet 1",
+                "required": 1
+              },
+              {
+                "id": "SUBNET2",
+                "name": "The second Subnet for the NAT Gateways from the application VPC.",
+                "type": "entry",
+                "default": "SUBNET2",
+                "hint": "6.10 - Subnet 2",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_SECURITY_GROUP",
+                "name": "The security group associated with the Web tier ELB.",
+                "type": "entry",
+                "default": "WEB_TIER_SECURITY_GROUP",
+                "hint": "Web-tier Security Group",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_SECURITY_GROUP",
+                "name": "The security group associated with the App-tier ELB.",
+                "type": "entry",
+                "default": "APP_TIER_SECURITY_GROUP",
+                "hint": "App-tier Security Group",
+                "required": 1
+              },
+              {
+                "id": "DATA_TIER_SECURITY_GROUP",
+                "name": "The security group associated with the Data-tier.",
+                "type": "entry",
+                "default": "DATA_TIER_SECURITY_GROUP",
+                "hint": "Data-tier Security Group",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_APPLICATION_VPC",
+                "name": "The instance ID for the Web-tier application VPC.",
+                "type": "entry",
+                "default": "WEB_TIER_APPLICATION_VPC",
+                "hint": "Web-tier Application VPC ID",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_APPLICATION_VPC",
+                "name": "The instance ID for the App-tier application VPC.",
+                "type": "entry",
+                "default": "APP_TIER_APPLICATION_VPC",
+                "hint": "App-tier Application VPC ID",
+                "required": 1
+              },
+              {
+                "id": "DATA_TIER_APPLICATION_VPC",
+                "name": "The instance ID for the Data-tier application VPC.",
+                "type": "entry",
+                "default": "DATA_TIER_APPLICATION_VPC",
+                "hint": "Data-tier Application VPC ID",
+                "required": 1
+              },
+              {
+                "id": "DB_INSTANCE_IDENTIFIER",
+                "name": "The DB Instance Identifier associated with you DB instance.",
+                "type": "entry",
+                "default": "DB_INSTANCE_IDENTIFIER",
+                "hint": "6.34 - DB Instance Identifier",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "CIS Amazon Web Services Three-tier Web Architecture L1 1.0.0",
+            "free": 1
+          },
+          {
+            "id": "72426_CIS_Amazon_Web_Services_Three-tier_Web_Architecture_L2_v1.0.0.audit",
+            "inputs": [
+              {
+                "id": "WEB_TIER_KMS_ALIAS",
+                "name": "Web-tier KMS Alias Name",
+                "type": "entry",
+                "default": "WEB_TIER_KMS_ALIAS",
+                "hint": "Web-tier KMS Alias Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_KMS_ALIAS",
+                "name": "App-tier KMS Alias Name",
+                "type": "entry",
+                "default": "APP_TIER_KMS_ALIAS",
+                "hint": "App-tier KMS Alias Name",
+                "required": 1
+              },
+              {
+                "id": "DATA_TIER_KMS_ALIAS",
+                "name": "Data-tier KMS Alias Name",
+                "type": "entry",
+                "default": "DATA_TIER_KMS_ALIAS",
+                "hint": "Data-tier KMS Alias Name",
+                "required": 1
+              },
+              {
+                "id": "WEB_TIER_ELB",
+                "name": "Designated Load Balancer Name for your Web-tier environment.",
+                "type": "entry",
+                "default": "WEB_TIER_ELB",
+                "hint": "Web-tier Load Balancer Name",
+                "required": 1
+              },
+              {
+                "id": "APP_TIER_ELB",
+                "name": "Designated Load Balancer Name for your App-tier environment.",
+                "type": "entry",
+                "default": "APP_TIER_ELB",
+                "hint": "APP-tier Load Balancer Name",
+                "required": 1
+              },
+              {
+                "id": "HOSTED_ZONE_ID",
+                "name": "The Hosted Zone ID used by the application.",
+                "type": "entry",
+                "default": "HOSTED_ZONE_ID",
+                "hint": "Hosted Zone ID for application",
+                "required": 1
+              },
+              {
+                "id": "DB_INSTANCE_IDENTIFIER",
+                "name": "The DB Instance Identifier for your application DB instance.",
+                "type": "entry",
+                "default": "DB_INSTANCE_IDENTIFIER",
+                "hint": "DB Instance Identifier",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "CIS Amazon Web Services Three-tier Web Architecture L2 1.0.0",
+            "free": 1
+          },
+          {
+            "id": "72426_AWS_Security_Best_Practices.audit",
+            "inputs": [
+              {
+                "id": "ADMIN_GROUP",
+                "name": "AWS admin group",
+                "type": "entry",
+                "default": "Admins",
+                "hint": "This is the name of the AWS admin group used by your organization",
+                "required": 1
+              },
+              {
+                "id": "CHANGE_DAYS_WINDOW",
+                "name": "Change window in days.",
+                "type": "entry",
+                "default": "90",
+                "hint": "Configuration change window",
+                "required": 1
+              },
+              {
+                "id": "INACTIVE_ACCOUNT_DAYS",
+                "name": "Days without Account activity",
+                "type": "entry",
+                "default": "30",
+                "hint": "Inactive Days",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "Tenable AWS Best Practice Audit",
+            "free": 1
+          }
+        ]
+      },
+      {
+        "name": "Microsoft Azure",
+        "required_creds": [
+          "Microsoft Azure"
+        ],
+        "audits": [
+          {
+            "inputs": [
+              {
+                "id": "file",
+                "name": "Audit file",
+                "type": "file",
+                "default": null,
+                "required": true
+              }
+            ],
+            "type": "custom",
+            "name": "(Upload a custom Microsoft Azure audit file)",
+            "free": 1,
+            "unlimited": true
+          },
+          {
+            "id": "79357_TNS_Microsoft_Azure_Best_Practices-Infrastructure.audit",
+            "inputs": [
+              {
+                "id": "SCAN_INTERVAL",
+                "name": "Nessus Scan Interval",
+                "type": "entry",
+                "default": "30",
+                "hint": "This is the interval between your Nessus scans.",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "TNS Microsoft Azure Best Practices Audit v1.0",
+            "free": 1
+          },
+          {
+            "id": "79357_TNS_Microsoft_Azure_Best_Practices-Databases.audit",
+            "inputs": [
+              {
+                "id": "SCAN_INTERVAL",
+                "name": "Nessus Scan Interval",
+                "type": "entry",
+                "default": "30",
+                "hint": "This is the interval between your Nessus scans.",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "TNS Microsoft Azure Database Best Practices Audit v1.0.0",
+            "free": 1
+          },
+          {
+            "id": "79357_TNS_Microsoft_Azure_Best_Practices-Websites.audit",
+            "inputs": [
+              {
+                "id": "SCAN_INTERVAL",
+                "name": "Nessus Scan Interval",
+                "type": "entry",
+                "default": "30",
+                "hint": "This is the interval between your Nessus scans.",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "TNS Microsoft Azure Websites Best Practices Audit v1.0.0",
+            "free": 1
+          }
+        ]
+      },
+      {
+        "name": "Office 365",
+        "required_creds": [
+          "Office 365"
+        ],
+        "audits": [
+          {
+            "inputs": [
+              {
+                "id": "file",
+                "name": "Audit file",
+                "type": "file",
+                "default": null,
+                "required": true
+              }
+            ],
+            "type": "custom",
+            "name": "(Upload a custom Office 365 audit file)",
+            "free": 1,
+            "unlimited": true
+          },
+          {
+            "id": "109580_Tenable_Best_Practices_Office365_v1.0.0.audit",
+            "inputs": [
+              {
+                "id": "GLOBAL_ADMINISTRATOR",
+                "name": "Global Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Global Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "BILLING_ADMINISTRATOR",
+                "name": "Billing Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Billing Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "COMPLIANCE_ADMINISTRATOR",
+                "name": "Compliance Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Compliance Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "CONDITIONAL_ACCESS_ADMINISTRATOR",
+                "name": "Conditional Access Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Conditional Access Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "CRM_SERVICE_ADMINISTRATOR",
+                "name": "CRM Service Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the CRM Service Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "DEVICE_ADMINISTRATOR",
+                "name": "Device Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Device Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "EXCHANGE_ADMINISTRATOR",
+                "name": "Exchange Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Exchange Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "GUEST_INVITER",
+                "name": "Guest Inviters",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Guest Inviter role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "INFORMATION_PROTECTION_ADMINISTRATOR",
+                "name": "Information Protection Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Information Protection Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "INTUNE_ADMINISTRATOR",
+                "name": "Intune Service Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Intune Service Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "MAILBOX_ADMINISTRATOR",
+                "name": "Mailbox Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Mailbox Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "HELPDESK_ADMINISTRATOR",
+                "name": "Helpdesk Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Helpdesk Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "POWER_BI_SERVICE_ADMINISTRATOR",
+                "name": "Power BI Service Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Power BI Service Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "PRIVILEGED_ROLE_ADMINISTRATOR",
+                "name": "Privileged Role Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Privileged Role Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "REPORTS_READER",
+                "name": "Reports Readers",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Reports Reader role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "SECURITY_ADMINISTRATOR",
+                "name": "Security Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Security Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "SECURITY_READER",
+                "name": "Security Readers",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Security Reader role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "SERVICE_SUPPORT_ADMINISTRATOR",
+                "name": "Service Support Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Service Support Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "SHAREPOINT_ADMINISTRATOR",
+                "name": "SharePoint Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the SharePoint Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "USER_ACCOUNT_ADMINISTRATOR",
+                "name": "User Account Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the User Account Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "SKYPE_ADMINISTRATOR",
+                "name": "Skype for Business Administrators",
+                "type": "entry",
+                "default": "None",
+                "hint": "The accounts assigned to the Skype for Business Administrator role, comma separated, or 'None' when the role is unassigned.",
+                "required": 1
+              },
+              {
+                "id": "COMPLIANCE_MAIL",
+                "name": "Security Compliance Notification Email",
+                "type": "entry",
+                "default": "None",
+                "hint": "The email address that will be used to notifiy the organization in the event of a security incident.",
+                "required": 1
+              },
+              {
+                "id": "COMPLIANCE_PHONE",
+                "name": "Security Compliance Notification Phone",
+                "type": "entry",
+                "default": "None",
+                "hint": "The phone number that will be used to notifiy the organization in the event of a security incident.",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "Tenable Office 365 Best Practices",
+            "free": 1
+          }
+        ]
+      },
+      {
+        "name": "Rackspace",
+        "required_creds": [
+          "Rackspace"
+        ],
+        "audits": [
+          {
+            "inputs": [
+              {
+                "id": "file",
+                "name": "Audit file",
+                "type": "file",
+                "default": null,
+                "required": true
+              }
+            ],
+            "type": "custom",
+            "name": "(Upload a custom Rackspace audit file)",
+            "free": 1,
+            "unlimited": true
+          },
+          {
+            "id": "79356_TNS_BestPractice_RackSpace.audit",
+            "inputs": [
+              {
+                "id": "SERVER_UN",
+                "name": "Server Owner Username",
+                "type": "entry",
+                "default": "",
+                "hint": "This 'Server Owner Username' variable is used in the audit to query for servers owned by a specific username.",
+                "required": 0
+              },
+              {
+                "id": "LB_ALG",
+                "name": "LB Algorithm",
+                "type": "entry",
+                "default": "ROUND_ROBIN",
+                "hint": "The algorithm used by the LoadBalancers",
+                "required": 1
+              },
+              {
+                "id": "ROLE_NAME",
+                "name": "Role Name for User List",
+                "type": "entry",
+                "default": ".*admin.*",
+                "hint": "This is the role name (regex) used in searching for and listing out a list of users with that role assigned to them",
+                "required": 1
+              },
+              {
+                "id": "SCAN_INTERVAL",
+                "name": "Days since the last Nessus scan",
+                "type": "entry",
+                "default": "30",
+                "hint": "This is a 'Days Since' value for Nessus Scans. This will be used in determining Servers, DB backups, Domains and LBs created or updated within 'VALUE' amount of days",
+                "required": 1
+              },
+              {
+                "id": "DBC_MAX_USER_CONN",
+                "name": "DBC Var - max_user_connections",
+                "type": "entry",
+                "default": "NOT DEFINED",
+                "hint": "This is the value of the parameter 'max_user_connections' as used in database configuration templates",
+                "required": 1
+              },
+              {
+                "id": "DBC_MAX_CONN",
+                "name": "DBC Var - max_connections",
+                "type": "entry",
+                "default": "NOT DEFINED",
+                "hint": "This is the value of the parameter 'max_connections' as used in database configuration templates",
+                "required": 1
+              },
+              {
+                "id": "DBC_MAX_ALLOW_PACKET",
+                "name": "DBC Var - max_allowed_packet",
+                "type": "entry",
+                "default": "NOT DEFINED",
+                "hint": "This is the value of the parameter 'max_allowed_packet' as used in database configuration templates",
+                "required": 1
+              },
+              {
+                "id": "DBC_MAX_CONN_ERRS",
+                "name": "DBC Var - max_connect_errors",
+                "type": "entry",
+                "default": "NOT DEFINED",
+                "hint": "This is the value of the parameter 'max_connect_errors' as used in database configuration templates",
+                "required": 1
+              },
+              {
+                "id": "DBC_WAIT_TIMEOUT",
+                "name": "DBC Var - wait_timeout",
+                "type": "entry",
+                "default": "NOT DEFINED",
+                "hint": "This is the value of the parameter 'wait_timeout' as used in database configuration templates",
+                "required": 1
+              },
+              {
+                "id": "DBC_SQL_MODE",
+                "name": "DBC Var - sql_mode",
+                "type": "entry",
+                "default": "NOT DEFINED",
+                "hint": "This is the value of the parameter 'sql_mode' as used in database configuration templates",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "TNS Best Practice RackSpace",
+            "free": 1
+          }
+        ]
+      },
+      {
+        "name": "Salesforce.com",
+        "required_creds": [
+          "Salesforce.com"
+        ],
+        "audits": [
+          {
+            "inputs": [
+              {
+                "id": "file",
+                "name": "Audit file",
+                "type": "file",
+                "default": null,
+                "required": true
+              }
+            ],
+            "type": "custom",
+            "name": "(Upload a custom Salesforce.com audit file)",
+            "free": 1,
+            "unlimited": true
+          },
+          {
+            "id": "76711_TNS_Salesforce_Best_Practices_v1.0.0.audit",
+            "inputs": [
+              {
+                "id": "START_IP",
+                "name": "Start IP",
+                "type": "entry",
+                "default": "127.0.0.1",
+                "hint": "This is the start IP of the address range from where users are allowed to login to SalesForce.com",
+                "required": 1
+              },
+              {
+                "id": "END_IP",
+                "name": "End IP",
+                "type": "entry",
+                "default": "127.0.0.254",
+                "hint": "This is the end IP of the address range from where users are allowed to login to SalesForce.com",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_MOBILE",
+                "name": "Chatter Mobile",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Chatter Mobile be enabled",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_MOBILE_PUSH",
+                "name": "CM Push Notification",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Chatter Mobile push notifications be enabled",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_MOBILE_IPAD",
+                "name": "CM iPad",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Chatter Mobile be enabled for iPad",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_MOBILE_IPHONE",
+                "name": "CM iPhone",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Chatter Mobile be enabled for iPhone",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_MOBILE_ANDROID",
+                "name": "CM Android",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Chatter Mobile be enabled for Android",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_MOBILE_BLACKBERRY",
+                "name": "CM Blackberry",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Chatter Mobile be enabled for Blackberry",
+                "required": 1
+              },
+              {
+                "id": "DASHBOARD_MOBILE_IPAD",
+                "name": "DM iPad",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Dashboard Mobile be enabled for iPad",
+                "required": 1
+              },
+              {
+                "id": "MOBILE_LITE",
+                "name": "Mobile Lite",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Mobile Lite be enabled",
+                "required": 1
+              },
+              {
+                "id": "TOUCH_MOBILE_BROWSER",
+                "name": "TM Browser",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should the TouchMobile Browser access be enabled",
+                "required": 1
+              },
+              {
+                "id": "TOUCH_IPAD_APP",
+                "name": "TM iPad App",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should the TouchMobile iPad App access be enabled",
+                "required": 1
+              },
+              {
+                "id": "TOUCH_IPHONE_APP",
+                "name": "TM iPhone App",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should the TouchMobile iPhone App access be enabled",
+                "required": 1
+              },
+              {
+                "id": "SCAN_INTERVAL",
+                "name": "Nessus Scan Interval",
+                "type": "entry",
+                "default": "7",
+                "hint": "This is the Nessus scan interval used for finding new users created since the last scan.",
+                "required": 1
+              },
+              {
+                "id": "KNOWN_ADMINS",
+                "name": "Known Administrators",
+                "type": "entry",
+                "default": "Admin1|Admin2|Admin3",
+                "hint": "This is the list of approved administrators used to find accounts created by unauthorized users.",
+                "required": 1
+              },
+              {
+                "id": "PASSWORD_CHANGE",
+                "name": "PW Change Interval",
+                "type": "entry",
+                "default": "90",
+                "hint": "This is the value for number of days between required password changes.",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_FB_SSO",
+                "name": "Chatter Facebook SSO",
+                "type": "entry",
+                "default": "true",
+                "hint": "Should Facebook SSO be enabled for Chatter Answers",
+                "required": 1
+              },
+              {
+                "id": "CHATTER_FB_AUTH",
+                "name": "Facebook SSO Prov",
+                "type": "entry",
+                "default": "FacebookAuthProvider",
+                "hint": "What Facebook SSO authentication provider should be used",
+                "required": 1
+              }
+            ],
+            "type": "feed",
+            "name": "TNS Salesforce Best Practices Audit v1.0.0",
+            "free": 1
+          }
+        ]
+      }
+    ]
+  }
+}

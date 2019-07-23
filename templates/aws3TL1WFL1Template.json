@@ -1,0 +1,129 @@
+{
+"newScan": [
+    {
+  "template": "cloud_audit",
+  "credentials": {
+      "Cloud Services": {
+        "Amazon AWS": [
+          {
+            "id": ""
+          }
+        ]
+      },
+    "edit": {},
+    "delete": []
+  },
+  "settings": {
+    "region_dfw_pref_name": "yes",
+    "region_ord_pref_name": "yes",
+    "region_iad_pref_name": "yes",
+    "region_lon_pref_name": "yes",
+    "region_syd_pref_name": "yes",
+    "region_hkg_pref_name": "yes",
+    "microsoft_azure_subscriptions_ids": "",
+    "aws_ui_region_type": "Rest of the World",
+    "aws_cn_north_1": "",
+    "aws_cn_northwest_1": "",
+    "aws_us_east_1": "",
+    "aws_us_east_2": "",
+    "aws_us_west_1": "",
+    "aws_us_west_2": "",
+    "aws_ca_central_1": "",
+    "aws_eu_west_1": "",
+    "aws_eu_west_2": "",
+    "aws_eu_west_3": "",
+    "aws_eu_central_1": "",
+    "aws_eu_north_1": "",
+    "aws_ap_east_1": "",
+    "aws_ap_northeast_1": "",
+    "aws_ap_northeast_2": "",
+    "aws_ap_northeast_3": "",
+    "aws_ap_southeast_1": "",
+    "aws_ap_southeast_2": "",
+    "aws_ap_south_1": "",
+    "aws_sa_east_1": "",
+    "aws_us_gov_east_1": "",
+    "aws_us_gov_west_1": "",
+    "aws_use_https": "yes",
+    "aws_verify_ssl": "yes",
+    "enable_plugin_debugging": "no",
+    "audit_trail": "none",
+    "reverse_lookup": "no",
+    "log_live_hosts": "no",
+    "display_unreachable_hosts": "no",
+    "include_aggregate": true,
+    "acls": [
+      {
+        "object_type": "scan",
+        "permissions": 16,
+        "type": "default"
+      }
+    ],
+    "emails": "",
+    "sms": "",
+    "filter_type": "and",
+    "filters": [],
+    "launch_now": false,
+    "enabled": false,
+    "name": "AWS Account Three Tier And Foundations Scan",
+    "description": "",
+    "scanner_id": ""
+  },
+  "audits": {
+    "feed": {
+      "add": [
+        {
+          "id": "72426_CIS_Amazon_Web_Services_Three-tier_Web_Architecture_L1_v1.0.0.audit",
+          "variables": {
+            "WEB_TIER_TAG": "WEB_TIER_TAG",
+            "WEB_TIER_TAG_VALUE": "WEB_TIER_TAG_VALUE",
+            "APP_TIER_TAG": "APP_TIER_TAG",
+            "APP_TIER_TAG_VALUE": "APP_TIER_TAG_VALUE",
+            "DATA_TIER_TAG": "DATA_TIER_TAG",
+            "DATA_TIER_TAG_VALUE": "DATA_TIER_TAG_VALUE",
+            "WEB_TIER_ELB": "WEB_TIER_ELB",
+            "APP_TIER_ELB": "APP_TIER_ELB",
+            "S3_BUCKET_NAME": "S3_BUCKET_NAME",
+            "WEB_TIER_ROLE": "WEB_TIER_ROLE",
+            "WEB_TIER_ROLE_POLICY": "WEB_TIER_ROLE_POLICY",
+            "APP_TIER_ROLE": "APP_TIER_ROLE",
+            "APP_TIER_ROLE_POLICY": "APP_TIER_ROLE_POLICY",
+            "WEB_TIER_LAUNCH_ROLE_NAME": "WEB_TIER_LAUNCH_ROLE_NAME",
+            "APP_TIER_LAUNCH_ROLE_NAME": "APP_TIER_LAUNCH_ROLE_NAME",
+            "ADMIN_GROUP_NAME": "ADMIN_GROUP_NAME",
+            "ADMIN_POLICY_NAME": "ADMIN_POLICY_NAME",
+            "ADMIN_POLICY_ARN": "ADMIN_POLICY_ARN",
+            "WEB_TIER_LAUNCH_CONFIG": "WEB_TIER_LAUNCH_CONFIG",
+            "APP_TIER_LAUNCH_CONFIG": "APP_TIER_LAUNCH_CONFIG",
+            "DB_INSTANCE_ARN": "DB_INSTANCE_ARN",
+            "WEB_TIER_AUTOSCALING_ELB": "WEB_TIER_AUTOSCALING_ELB",
+            "APP_TIER_AUTOSCALING_ELB": "APP_TIER_AUTOSCALING_ELB",
+            "VPC_FLOW_LOG_GROUP_NAME": "VPC_FLOW_LOG_GROUP_NAME",
+            "VPC_FLOW_LOG_ALARM_NAME": "VPC_FLOW_LOG_GROUP_NAME",
+            "SNS_TOPIC_ARN": "SNS_TOPIC_ARN",
+            "APP_DISTRIBUTION_ID": "APP_DISTRIBUTION_ID",
+            "WEB_TIER_LOG_GROUP": "WEB_TIER_LOG_GROUP",
+            "APP_TIER_LOG_GROUP": "APP_TIER_LOG_GROUP",
+            "SUBNET1": "SUBNET1",
+            "SUBNET2": "SUBNET2",
+            "WEB_TIER_SECURITY_GROUP": "WEB_TIER_SECURITY_GROUP",
+            "APP_TIER_SECURITY_GROUP": "APP_TIER_SECURITY_GROUP",
+            "DATA_TIER_SECURITY_GROUP": "DATA_TIER_SECURITY_GROUP",
+            "WEB_TIER_APPLICATION_VPC": "WEB_TIER_APPLICATION_VPC",
+            "APP_TIER_APPLICATION_VPC": "APP_TIER_APPLICATION_VPC",
+            "DATA_TIER_APPLICATION_VPC": "DATA_TIER_APPLICATION_VPC",
+            "DB_INSTANCE_IDENTIFIER": "DB_INSTANCE_IDENTIFIER"
+          }
+        },
+        {
+          "id": "72426_CIS_Amazon_Web_Services_Foundations_v1.2.0_Level1.audit",
+          "variables": {
+            "INACTIVE_ACCOUNT_DAYS": "90"
+          }
+        }
+      ]
+    }
+  }
+}
+]
+}

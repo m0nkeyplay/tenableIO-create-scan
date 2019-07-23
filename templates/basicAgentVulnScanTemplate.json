@@ -1,0 +1,20 @@
+{
+    "newScan": [
+        {
+    "template": "agent_basic",
+    "settings": {
+    "name":     "Basic Agent Scan",
+    "shared": 1,
+    "description":  "Scan systems connected via Nessus Agents.",
+    "scanner_id":    "",
+    "enabled": false,
+    "launch":   "ON_DEMAND",
+    "timezone": "US/Chicago",
+    "agent_group_id": [],
+    "acls": [{
+    "type": "default",
+    "permissions": 16
+    }]
+    } }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "newScan": [
+    {
+    "template": "string: Get name from the name field in IO_templates-Date.txt",
+    "credentials": {
+        "Host": {
+          "SSH": [
+            {
+              "id": "This is a managed credential - get from IO_credentials.txt"
+            }
+          ]
+        }
+    },
+    "settings": {
+    "name":     "Scan Name 1",
+    "shared": 1,
+    "description":  "text: Scan description 1",
+    "scanner_id":    "int32:  get from io_Scanners-Date.txt",
+    "enabled": false,
+    "text_targets": "192.168.0.0/24,10.10.0.0/16",
+    "launch":   "string: ON_DEMAND, DAILY, WEEKLY, MONTHLY, YEARLY",
+    "startTime": "YYYYMMDDTHHMMSS",
+    "rrules": "string:  FREQ=WEEKLY;INTERVAL=3;BYDAY=MO",
+    "timezone": "string:  US/Chicago",
+    "agent_group_id": [1,2,3],
+    "emails": "commna seperated values,replace@me.com,replace@metoo.com",
+    "acls": [{
+    "type": "default",
+    "permissions": 16
+    }]
+    } },
+    {
+    "template": "string: Get name from the name field in IO_templates-Date.txt",
+    "settings": {
+    "name":     "Scan Name 2",
+    "shared": 1,
+    "description":  "text: Scan description 1",
+    "scanner_id":    "int32:  get from io_Scanners-Date.txt",
+    "enabled": false,
+    "text_targets": "192.168.0.0/24,10.10.0.0/16",
+    "launch":   "string: ON_DEMAND, DAILY, WEEKLY, MONTHLY, YEARLY",
+    "startTime": "YYYYMMDDTHHMMSS",
+    "rrules": "string:  FREQ=WEEKLY;INTERVAL=3;BYDAY=MO",
+    "timezone": "string:  US/Chicago",
+    "agent_group_id": [1,2,3],
+    "emails": "commna seperated values,replace@me.com,replace@metoo.com",
+    "acls": [{
+    "type": "default",
+    "permissions": 16
+    }]
+    },
+    "audits": {
+        "feed": {
+          "add": [
+            {
+              "id": "72426_CIS_Amazon_Web_Services_Foundations_v1.2.0_Level1.audit",
+              "variables": {
+                "INACTIVE_ACCOUNT_DAYS": "90"
+              }
+            }
+          ]
+        }
+      }
+}    
+    ]
+}
